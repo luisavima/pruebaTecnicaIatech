@@ -1,10 +1,9 @@
 import React from "react";
-import  "../Style/App.css"
-import Header from "../Components/header"
+import "../Style/App.css";
+import Header from "../Components/header";
 import TarjetaMovies from "../Components/tarjetaMovies";
-import Paginacion from "../Components/paginacion"
+import Paginacion from "../Components/paginacion";
 import axios from "axios";
-
 
 class Principal extends React.Component {
   constructor(props) {
@@ -28,7 +27,10 @@ class Principal extends React.Component {
       )
       .then((resultado) => {
         console.log(resultado);
-        this.setState({ listadoMovies: resultado.data.results, page: resultado.data.page });
+        this.setState({
+          listadoMovies: resultado.data.results,
+          page: resultado.data.page,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -59,7 +61,7 @@ class Principal extends React.Component {
 
   //Función para siguiente página
   nextPage = () => {
-      var siguiente = 1;
+    var siguiente = 1;
     console.log(this.state);
     this.setState({ page: this.state.page++ });
     this.traerPeliculasApi();
@@ -67,11 +69,10 @@ class Principal extends React.Component {
 
   //Función para página anterior
   previousPage = () => {
-      if(this.state.page > 1){
-        this.setState({ page: this.state.page--});
-        this.traerPeliculasApi();
-      }
-
+    if (this.state.page > 1) {
+      this.setState({ page: this.state.page-- });
+      this.traerPeliculasApi();
+    }
   };
 
   render() {
@@ -84,6 +85,7 @@ class Principal extends React.Component {
               <TarjetaMovies
                 key={index}
                 name={movie.title}
+                to={`/detalle-movie/${movie.id}`}
                 image={`https://image.tmdb.org/t/p/w400` + movie.poster_path}
               />
             );
@@ -94,5 +96,5 @@ class Principal extends React.Component {
     );
   }
 }
-  
+
 export default Principal;

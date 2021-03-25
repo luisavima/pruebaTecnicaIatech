@@ -8,15 +8,12 @@ class Routers extends React.Component {
     return (
       <div>
         <Route>
-        <Switch>
-                <Route exact path="/" component={Principal} />   
-                <Route exact path="/Detalles" component={Detalle} />               
-              </Switch>
+          <Switch>
+            <Route exact path="/" component={Principal} />
+            <Route exact path="/detalle-movie/:id" component={Detalle} />
+          </Switch>
         </Route>
-        </div>
-           
-        
-        
+      </div>
     );
   }
 }
