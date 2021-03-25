@@ -61,7 +61,6 @@ class Principal extends React.Component {
 
   //Función para siguiente página
   nextPage = () => {
-    var siguiente = 1;
     console.log(this.state);
     this.setState({ page: this.state.page++ });
     this.traerPeliculasApi();
