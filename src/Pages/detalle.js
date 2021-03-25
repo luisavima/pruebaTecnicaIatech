@@ -1,14 +1,15 @@
-import React from "react";
+  import React, { Component } from "react";
+  import  "../Style/App.css"
+  import DescripcionMovies from "../Components/descripcionMovies"
 
-const Detalle = () => {
-  return (
-    <>
-      <div>
-          <h1>Hola soy detalle</h1>
-       
-      </div>
-    </>
-  );
-};
-
-export default Detalle;
+  class DetalleMovies extends Component {
+    render() {
+      return (
+        <div className="container container-detalles">
+        <DescripcionMovies/>
+        </div>
+      );
+    }
+  }
+  
+  export default DetalleMovies;

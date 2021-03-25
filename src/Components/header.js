@@ -10,6 +10,7 @@ class Header extends React.Component {
               <div className="form-group">
                 <br />
                 <input
+                 onChange={this.props.OnchangeFiltro}
                   className="form-control"
                   type="text"
                   placeholder="Buscar película"
@@ -22,59 +23,59 @@ class Header extends React.Component {
           <div className="col text-center">
               <form >
                   <label className="filtro" >Filtrar categorías: </label>
-                  <div class="form-check form-check-inline">
+                  <div className="form-check form-check-inline">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 id="inlineCheckbox1"
                 value="Acción"
               />
-              <label class="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" >
               Acción
               </label>
             </div>
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 id="inlineCheckbox1"
                 value="Drama"
               />
-              <label class="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" >
               Drama
               </label>
             </div>
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 id="inlineCheckbox1"
                 value="Terror"
               />
-              <label class="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" >
               Terror
               </label>
             </div>
 
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 id="inlineCheckbox1"
                 value="Infantil"
               />
-              <label class="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" >
               Infantil
               </label>
             </div>
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 id="inlineCheckbox1"
                 value="Comedia"
               />
-              <label class="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" >
               Comedia
               </label>
             </div>
