@@ -1,21 +1,19 @@
 import React from "react";
 
-function TarjetaMovies(props) {
-  const datos = props.movies;
-  return datos.map((pelicula) => {
+function TarjetaMovies({ name,image }) {
     return (
-      <div key={pelicula.id} className="d-flex justify-content-center col-sm-12 col-md-6 col-lg-4 mt-3">
-        <div className="card" style={{ width: "18rem", height: "460px" }}>
+      <div className=" justify-content-center col-lg-4 col-md-6 col-sm-12">
+        <div className="card" style={{ width: "18rem", height: "500px" }}>
           <img
-            src={pelicula.imagen}
+            src={image}
             className="card-img-top"
             style={{ width: "18rem", height: "350px" }}
             alt="portada"
           />
           <div className="card-body text-center">
-            <h5 className="card-title">{pelicula.nombre}</h5>
+            <h5 className="card-title">{name}</h5>
             <a
-              href={`cursos/${pelicula.id}`}
+              href={`Detalles/${""}`}
               className="btn btn-dark"
             >
               Ver Detalle
@@ -25,6 +23,6 @@ function TarjetaMovies(props) {
         <br />
       </div>
     );
-  });
-}
+  }
+  
 export default TarjetaMovies;

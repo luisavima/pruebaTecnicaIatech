@@ -78,9 +78,8 @@ class Header extends React.Component {
               Comedia
               </label>
             </div>
-                  
               </form>
-            
+            <br/>
           </div>
         </div>
       </>
